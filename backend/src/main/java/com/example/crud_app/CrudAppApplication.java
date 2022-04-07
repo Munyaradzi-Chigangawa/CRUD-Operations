@@ -1,13 +1,13 @@
-package zw.co.enhanceit.backend;
+package com.example.crud_app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendApplication {
+public class CrudAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		SpringApplication.run(CrudAppApplication.class, args);
 	}
 
 }
