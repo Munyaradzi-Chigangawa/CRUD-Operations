@@ -3,7 +3,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Employee  implements Serializable {
+public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
@@ -16,10 +16,9 @@ public class Employee  implements Serializable {
     @Column(nullable = false, updatable = false)
     private String employeeCode;
 
-    public Employee() {
-    }
+    public Employee() {}
 
-    public Employee(String name, String email, String jobTitle, String phone, String employeeCode, String imageUrl) {
+    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
@@ -88,11 +87,11 @@ public class Employee  implements Serializable {
     public String toString() {
         return "Employee{" +
                 "id=" + id +
-                ", name=" + name + '\'' +
-                ", email=" + email + '\'' +
-                ", jobTitle=" + jobTitle + '\'' +
-                ", phone=" + phone + '\'' +
-                ", imageUrl" + imageUrl + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", phone='" + phone + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
 }
